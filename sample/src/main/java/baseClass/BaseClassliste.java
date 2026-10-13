@@ -61,7 +61,8 @@ public class BaseClassliste {
 	@BeforeClass(groups= {"SmokeTest","RegressionTest"})
 	public void ConfigureBc(/*String browser*/) throws Exception {
 		//String Browser=browser;
-		String Browser=pu.readDataFromPropertyFile("browser");
+		//String Browser=pu.readDataFromPropertyFile("browser");
+		String Browser=System.getProperty("browser",pu.readDataFromPropertyFile("browser"));
 		if(Browser.equalsIgnoreCase("chrome"))
 			 driver=new ChromeDriver();
 		 else if(Browser.equalsIgnoreCase("firefox"))
@@ -77,9 +78,15 @@ public class BaseClassliste {
 	@BeforeMethod(groups= {"SmokeTest","RegressionTest"})
 	public void ConfigureBm() throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		String URL=pu.readDataFromPropertyFile("url");
-		String USERNAME=pu.readDataFromPropertyFile("username");
-		String PASSWORD=pu.readDataFromPropertyFile("password");
+		
+		String URL=System.getProperty("url",pu.readDataFromPropertyFile("url"));
+		String USERNAME=System.getProperty("username",pu.readDataFromPropertyFile("username"));
+		String PASSWORD=System.getProperty("password",pu.readDataFromPropertyFile("password"));
+		/*
+		 * String URL=pu.readDataFromPropertyFile("url"); String
+		 * USERNAME=pu.readDataFromPropertyFile("username"); String
+		 * PASSWORD=pu.readDataFromPropertyFile("password");
+		 */
 		driver.get(URL);
 		LoginPage lp=new LoginPage(driver);
 		lp.Login(USERNAME, PASSWORD);

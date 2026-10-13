@@ -2,8 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>IBM</groupId>
   <artifactId>AdvanceSelenium</artifactId>
-  <version>0.0.1-SNAPSHOT</version><dependencies>
+  <version>0.0.1-SNAPSHOT</version>
   
+  
+
+  <dependencies> 
   <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
@@ -11,6 +14,8 @@
     <version>4.39.0</version>
     <scope>compile</scope>
 </dependency>
+
+
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
