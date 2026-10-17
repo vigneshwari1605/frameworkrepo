@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="learning.ListernerTestLearn">
+      <class name="learning.GetProductInfoTest">
         <methods>
-          <include name="ConfigureBc"/>
-          <include name="ConfigureBs"/>
-          <include name="ConfigureAc"/>
-          <include name="ConfigureAs"/>
-          <include name="ConfigureBm"/>
-          <include name="ConfigureAm"/>
-          <include name="createInvoiceTest"/>
+          <include name="getProductInfoTest" invocation-numbers="2"/>
         </methods>
-      </class> <!-- learning.ListernerTestLearn -->
+      </class> <!-- learning.GetProductInfoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

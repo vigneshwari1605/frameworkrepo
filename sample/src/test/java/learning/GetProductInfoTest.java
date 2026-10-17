@@ -34,13 +34,13 @@ public class GetProductInfoTest {
 	public Object[][] getData(){
 		Object[][] obj=new Object[3][2];
 		obj[0][0]="Google";
-		obj[0][1]="Pixel 6 (Black, 8GB RAM, 128GB Storage)";
+		obj[0][1]="Pixel 11 5G (Frost)";
 		
 		obj[1][0]="Google";
-		obj[1][1]="Pixel 10 5G (Obsidian, 12GB RAM, 256GB Storage)";
+		obj[1][1]="Pixel 10a 5G (Obsidian, 8GB RAM, 256GB Storage)";
 		
 		obj[2][0]="Google";
-		obj[2][1]="Pixel 11 5G (Pistachio) | 12GB RAM, 256GB Storage";
+		obj[2][1]="Pixel 7a 5G (Snow, 128 GB) (8 GB RAM)";
 		
 		return obj;
 	}
